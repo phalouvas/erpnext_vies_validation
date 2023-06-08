@@ -8,8 +8,7 @@
  "engine": "InnoDB",
  "field_order": [
   "vies",
-  "customer",
-  "route"
+  "customer"
  ],
  "fields": [
   {
@@ -26,16 +25,10 @@
    "label": "Customer",
    "options": "Customer",
    "reqd": 1
-  },
-  {
-   "fieldname": "route",
-   "fieldtype": "Data",
-   "label": "Route"
   }
  ],
- "has_web_view": 1,
  "links": [],
- "modified": "2023-06-08 08:04:05.803991",
+ "modified": "2023-06-08 14:17:23.269080",
  "modified_by": "Administrator",
  "module": "Vies Validation",
  "name": "Vies",
@@ -54,7 +47,6 @@
    "write": 1
   }
  ],
- "route": "vies",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": []

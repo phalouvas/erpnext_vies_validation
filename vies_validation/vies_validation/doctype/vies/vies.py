@@ -2,12 +2,12 @@
 # For license information, please see license.txt
 
 # import frappe
-from frappe.website.website_generator import WebsiteGenerator
+from frappe.model.document import Document
 import frappe
 import requests
 from xml.etree import ElementTree as ET
 
-class Vies(WebsiteGenerator):
+class Vies(Document):
 
 	def validate(self):
 		if self.vies:
