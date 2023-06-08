@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-06-08 07:39:08.271946",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "vies",
+  "customer",
+  "route"
+ ],
+ "fields": [
+  {
+   "fetch_from": "customer.tax_id",
+   "fieldname": "vies",
+   "fieldtype": "Data",
+   "label": "Vies"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  }
+ ],
+ "has_web_view": 1,
+ "links": [],
+ "modified": "2023-06-08 07:43:36.378709",
+ "modified_by": "Administrator",
+ "module": "Vies Validation",
+ "name": "Vies",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "route": "vies",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
