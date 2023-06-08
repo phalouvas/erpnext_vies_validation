@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include vies_validation *.css
+recursive-include vies_validation *.csv
+recursive-include vies_validation *.html
+recursive-include vies_validation *.ico
+recursive-include vies_validation *.js
+recursive-include vies_validation *.json
+recursive-include vies_validation *.md
+recursive-include vies_validation *.png
+recursive-include vies_validation *.py
+recursive-include vies_validation *.svg
+recursive-include vies_validation *.txt
+recursive-exclude vies_validation *.pyc
