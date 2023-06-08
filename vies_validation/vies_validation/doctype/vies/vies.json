@@ -14,6 +14,7 @@
  "fields": [
   {
    "fetch_from": "customer.tax_id",
+   "fetch_if_empty": 1,
    "fieldname": "vies",
    "fieldtype": "Data",
    "label": "Vies"
@@ -34,7 +35,7 @@
  ],
  "has_web_view": 1,
  "links": [],
- "modified": "2023-06-08 07:43:36.378709",
+ "modified": "2023-06-08 08:04:05.803991",
  "modified_by": "Administrator",
  "module": "Vies Validation",
  "name": "Vies",
