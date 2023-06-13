@@ -102,6 +102,18 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
+# vies_validation/hooks.py
+doc_events = {
+    "Quotation": {
+        "before_save": "vies_validation.remove_tax.before_save_quotation"
+    },
+    "Sales Order": {
+        "before_save": "vies_validation.remove_tax.before_save_sales_order"
+    },    
+    "Sales Invoice": {
+        "before_save": "vies_validation.remove_tax.before_save_sales_invoice"
+    }
+}
 # doc_events = {
 #	"*": {
 #		"on_update": "method",

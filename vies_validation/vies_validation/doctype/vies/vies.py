@@ -10,6 +10,11 @@ from xml.etree import ElementTree as ET
 class Vies(Document):
 
 	def validate(self):
+		if not self.customer: 
+			user = frappe.get_user()
+			customer = frappe.get_doc("Customer", {"owner": user.name})
+			self.customer = customer.name
+
 		if self.vies:
 			vat_number = self.vies
 			# Create the SOAP envelope
@@ -48,5 +53,3 @@ class Vies(Document):
 		# Save customer
 		frappe.flags.ignore_permissions = True
 		frappe.db.set_value("Customer", self.customer, "tax_id", self.vies)
-
-	pass
