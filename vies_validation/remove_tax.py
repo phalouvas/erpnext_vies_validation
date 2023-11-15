@@ -21,7 +21,12 @@ def before_save_sales_order(doc, method=None):
 
 @frappe.whitelist()
 def before_save_sales_invoice(doc, method=None):
-    sales_order = frappe.get_doc("Sales Order", doc.items[0].sales_order)
-    if doc.tax_id and sales_order.order_type == "Shopping Cart":
-       remove_tax(doc)
+    # If in the doc invoice there is customer check if it has tax_id, it's country and if it is a shopping cart order remove tax
+    if doc.customer:
+        
+        tax_id = frappe.db.get_value('Customer', doc.customer, 'tax_id')
+        territory = frappe.db.get_value('Customer', doc.customer, 'territory')
+        if tax_id and doc.is_pos == 1 and territory != "Cyprus":
+            remove_tax(doc)
+
     pass
