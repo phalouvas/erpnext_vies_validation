@@ -1,5 +1,6 @@
 import frappe
 
 def get_context(context):
-	# do your magic here
+	# Set the title of the edit form
+	context.title = "VIES Validation"
 	pass
